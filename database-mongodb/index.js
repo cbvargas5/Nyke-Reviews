@@ -8,9 +8,7 @@ const { ObjectId } = require('mongodb');
 
 const { MongoClient } = require('mongodb');
 
-const url = `mongodb://${localhost}`
-
-mongoose.connect(`mongodb://${localhost}/NykeReviews`, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
+mongoose.connect(`mongodb://${ec2Mongo}/NykeReviews`, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
