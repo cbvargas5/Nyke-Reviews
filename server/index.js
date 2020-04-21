@@ -14,7 +14,7 @@ const port = 3003;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '../client-react/dist')));
 
 app.use('/api/products/reviews', router);
